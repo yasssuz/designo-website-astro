@@ -46,7 +46,7 @@
     preact "^10.5.13"
     preact-render-to-string "^5.1.18"
 
-"@astrojs/renderer-react@0.2.0":
+"@astrojs/renderer-react@0.2.0", "@astrojs/renderer-react@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@astrojs/renderer-react/-/renderer-react-0.2.0.tgz#1a033744186562559c17406e943d07323d71e9e9"
   integrity sha512-xMF991MMCzMQkIGu/lazO9nwz5SWGZ93h/guC84DV/oIeiPAEIfCnO8cTCqFAgzv9Gti9TovR4RX+jReYRqpGA==
