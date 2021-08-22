@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 24px;
+
+  &__logo {
+    height: 27px;
+
+    img {
+      height: 27px;
+      width: 202px;
+    }
+  }
+
+  &__toggler {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    span {
+      background: #1d1c1e;
+      height: 4px;
+      width: 24px;
+      display: block;
+    }
+
+    span + span {
+      margin-top: 4px;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 96px;
+    background: #1d1c1e;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+
+    &.active {
+      height: 200px;
+    }
+  }
+}
