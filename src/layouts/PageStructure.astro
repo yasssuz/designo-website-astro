@@ -1,6 +1,6 @@
 ---
-  import Header from "../components/Header.astro"
-  const { title, description } = Astro.props;
+  import Header from "../components/shared/Header.jsx"
+  const { title, styleFile } = Astro.props;
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content={description}>
+    <meta name="description" content="With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -17,10 +17,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href={`/styles/${styleFile}.css`} />
   </head>
 
   <body> 
-    <Header />
+    <Header client:idle />
     <slot />
   </body>
 </html>
