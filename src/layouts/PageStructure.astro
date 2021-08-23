@@ -1,5 +1,5 @@
 ---
-  import Header from "../components/shared/Header.jsx"
+  import Header from "../components/shared/Header/index.jsx"
   const { title, styleFile } = Astro.props;
 ---
 
@@ -16,11 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles/globals.css" />
-    <link rel="stylesheet" href={`/styles/${styleFile}.css`} />
   </head>
 
-  <body> 
+  <body style="max-width: 1200px; margin: 0 auto;"> 
     <Header client:idle />
     <slot />
   </body>
